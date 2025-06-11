@@ -1,0 +1,6 @@
+Group: Tony Lyu
+
+I pretty much followed the initial design, the only thing I did differently was that 
+I did not end up using a pay.h and pay.cpp since the payments are virtual, I just 
+made the payment process so that it assumes the user pays and the event center received
+payment.  

@@ -1,0 +1,107 @@
+
+// to reprent a single seat on the plane
+in seat.hpp:
+struct Seat {
+    int row;
+    char column;
+    bool assigned;
+    string name;
+};
+
+// to represent a flight
+flight.hpp:
+#include "Seat.hpp"
+struct flight {
+    string menifest;
+    vector<vector<Seat>> seats;
+    flight();
+
+    void init();
+    void login();
+    void passMenu(string name);
+    void adminMenu();
+    void chart();
+    void getSeat(string name);
+    void chooseSeat(string name);
+    void removeSeat(string name);
+    void printBoardingPass(string name);
+    void printManifest();
+    void loadManifest();
+    void saveManifest();
+    void assignSeat();
+};
+
+flight.cpp:
+#include "flight.hpp"
+
+flight::flight() { init(); }
+
+void flight::init() {
+    create 2d vector here with nested for loops
+}
+
+void flight::chart() {
+    print seating chart
+    possible format:
+    1A[ ] 1B[ ] 1D[X]...
+    [ ] for unassigned seats
+    [X] for assigned seats
+}
+
+void flight::getSeat(name) {
+    check if there's any unassgined seats left
+    check if the person have a seat already
+    srand(time(0))
+    while true:
+        int r = rand() % 12
+        int c = rand() % 6
+        assign if seat not taken
+        else loop    
+}
+
+void flight::chooseSeat(name) {
+    check if dude has seat already
+    prints chart
+    ask for input row and column
+    assign seat
+}
+
+void flight::removeSeat(name) {
+    loop through all seat:
+        if seat.name = name:
+            remove dude from the seat
+}
+
+void flight::printBoardingPass(name) {
+    pass
+}
+
+void flight::passMenu(name) {
+    print option menu
+    while true:
+        case switch on user input
+}
+
+void flight::adminMenu() {
+    same as above
+}
+
+void flight::login() {
+    ask user or admin
+    if user:
+        get dude's name
+        passMenu()
+    else:
+        ask for creds
+        adminMenu
+}
+
+main.cpp:
+#include "flight.hpp"
+
+int main() {
+    flight f;
+    f.login();
+
+    return 0;
+}

@@ -1,0 +1,13 @@
+the csv files are organized as such: the first block contains the section names, like username, experience with c++ etc. The rest is student answers, structures as: <{name}, {c++}, {gdb}, {algo}, {do not work with}, {work with},,>, where the last 2 parts are optional. In case there are multiple students that someone want or does not want to work with, the names are seperated by a <;>. 
+
+The first part of the program is to read the data. The main class should ask for a file name, and then load the data from the given file. The data is read and stored as a vector of students. Each student is a struct that contains a string name, an int cpp, an int dgb, an int algo, a {list of strings} workwith, and a {list of strings} notwith. upon reading data, beginner, intermediate, and advanced are automatically translated to 1, 2 and 3 respectively. 
+
+the stored vector of students should be stored in main in a variable called students. then the main should create a list of students of size {int(len(students) / team size)}, and start the grouping algorithm. 
+
+the grouping algorithm first calculate the average score for c++, gdb, and algo attribute. For example, if the total score for the three attributes from a data set is 30, 20, 15, for 10 students, the average would be 3, 2, 1.5. It will then address the workwith attribute. The algorithm check for all students who have someone that they want to work with, then group them up in seperate teams. Then, the algorithm will put fill the team assignment based on don't work with attribute for all students. After that, to balance the team scores, start swapping student to achieve the desired assignment. 
+
+After the assignment is done, print the scores of each team. 
+
+A list of teams contains vectors of students, which satisfified the nested container requirement. 
+
+ 
